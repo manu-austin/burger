@@ -1,0 +1,50 @@
+{{!-- top screen --}}
+
+  <img src="/assets/img/burger.png" alt="burger">
+  
+  <h1>Eat-Da-Burger App</h1>
+
+
+{{!-- middle screen --}}
+
+<div id="MidScreen">
+
+  {{!-- middle screen left --}}
+
+    <div class="Burgers to devour">
+        <ul>
+            {{#each burger}}
+            {{#unless devoured}}
+            {{> burgers/burger devoured=false}}
+            {{/unless}}
+            {{/each}}
+        </ul>
+    </div>
+
+
+
+  {{!-- middle screen center --}}
+
+    <div class="Devoured burgers">
+        <ul>
+            {{#each burger}}
+            {{#if devoured}}
+            {{> burgers/burger devoured=true}}
+            {{/if}}
+            {{/each}}
+        </ul>
+    </div>
+
+
+
+  {{!-- middle screen right--}}
+
+    <div class="Add burger">
+        <h2>Add a Burger</h2>
+        <input id="burgerName" type="text" placeholder="Name of Your Burger">
+        <button id="addBurger" type="button">Add</button>
+    </div>
+
+
+
+</div>
