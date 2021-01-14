@@ -1,5 +1,5 @@
 // Import MySQL connection.
-var connection = require("./connection.js");
+var connection = require("./config.js");
 
 // Method used to get and store data in db
 var orm = {
