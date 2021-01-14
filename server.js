@@ -16,7 +16,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
 // the main page is always displayed
-app.use(methodOverride('_method'));
+// app.use(methodOverride('_method'));
 app.engine("handlebars", exphbs({
     defaultLayout: "main"
 }));
