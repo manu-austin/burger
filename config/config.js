@@ -11,6 +11,7 @@ if (process.env.JAWSDB_URL) {
     password: "",
     database: "burgers_db"
 });
+}
 
 // Makes connection
 connection.connect(function(err) {
@@ -22,4 +23,4 @@ connection.connect(function(err) {
 });
 
 // Exports connection for our ORM to use.
-module.exports = connection;
+module.exports = connection
